@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How InvoiceQuick works — privacy, PDF export & what it is</title>
+<meta name="description" content="How InvoiceQuick works: it builds and totals your invoice entirely in your browser, exports to PDF, HTML, or a reusable JSON file, and never uploads your data. Not tax or legal advice.">
+<link rel="canonical" href="https://dukotah.github.io/invoicequick/about.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="InvoiceQuick">
+<meta property="og:title" content="How InvoiceQuick works">
+<meta property="og:description" content="A privacy-first, client-side invoice generator. Here's exactly how it works, where your data goes (nowhere), and what it is and isn't.">
+<meta property="og:url" content="https://dukotah.github.io/invoicequick/about.html">
+<meta property="og:image" content="https://dukotah.github.io/invoicequick/og-image.png">
+<meta name="theme-color" content="#faf8f4">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="masthead" role="banner">
+  <div class="wrap hdr-bar">
+    <a class="brand" href="./" aria-label="InvoiceQuick — go to homepage">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="11" y="6" width="33" height="46" rx="4" fill="#13525a"/>
+        <line x1="18" y1="17" x2="37" y2="17" stroke="#faf8f4" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="18" y1="24" x2="37" y2="24" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="43" cy="44" r="13" fill="#bf6b3c"/>
+        <text x="43" y="49.4" font-family="Fraunces,Georgia,serif" font-size="17" font-weight="700" fill="#faf8f4" text-anchor="middle">$</text>
+      </svg>
+      <span class="wordmark">InvoiceQuick</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="./">Make an invoice</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <article class="doc">
+    <div class="wrap narrow">
+      <p class="eyebrow">How it works</p>
+      <h1>A real invoice, made in your browser.</h1>
+      <p class="lede">InvoiceQuick is a free, client-side invoice generator from <a href="https://copperbaytech.com" target="_blank" rel="noopener noreferrer">Copper Bay Labs</a>. You fill in a short form, it totals everything and renders a clean invoice live, and you export it. There's no account and no server — which is exactly why it can be this fast and this private.</p>
+
+      <h2>What it does</h2>
+      <ul>
+        <li><strong>Builds the invoice as you type.</strong> Your business, the client, line items, dates, a tax rate you name, and a flat discount — the preview updates on every keystroke.</li>
+        <li><strong>Does the math.</strong> Each line is quantity × unit price; it sums the subtotal, subtracts any discount, applies your tax rate to what's left, and shows the total.</li>
+        <li><strong>Formats currency correctly.</strong> Pick from 15+ currencies and amounts are formatted for that currency (including ones with no decimal places, like JPY) using your browser's built-in internationalization.</li>
+        <li><strong>Exports three ways</strong> — see below.</li>
+      </ul>
+
+      <h2>Getting a PDF</h2>
+      <p>Click <strong>Download PDF</strong>. A print stylesheet hides everything except the invoice, then your browser's print dialog opens — choose <strong>“Save as PDF”</strong> as the destination and save. This uses the PDF export already built into Chrome, Edge, Safari, and Firefox, so there's no plugin, no upload, and it works offline. The result has no watermark.</p>
+      <div class="callout"><strong>Tip:</strong> in the print dialog, turn off “Headers and footers” for the cleanest result, and the page margins are already set for you.</div>
+
+      <h2>Saving and reusing an invoice</h2>
+      <p>Two formats, both downloaded straight to your device:</p>
+      <ul>
+        <li><strong>.json</strong> — a tiny data file of the invoice. Click <strong>Load .json</strong> next month to bring everything back, then just change the invoice number and dates. Perfect for repeat clients.</li>
+        <li><strong>.html</strong> — a standalone invoice file with its styling baked in. Open it on any device to view or print it; it doesn't depend on this site.</li>
+      </ul>
+      <p>InvoiceQuick also <strong>autosaves</strong> your current invoice to this browser's local storage, so a refresh won't lose your work. That data stays on your machine.</p>
+
+      <h2 id="privacy">Where your data goes</h2>
+      <p><strong>Nowhere.</strong> There is no InvoiceQuick backend to send data to. Everything — your client names, rates, totals, notes — lives only in the current browser tab and (for autosave) this browser's local storage. Nothing is uploaded, logged, or shared. There are no third-party analytics or ad scripts. The only external request the page makes is to Google Fonts for the typeface; if you want zero third-party requests, the fonts degrade gracefully to system fonts.</p>
+      <p>Because there's no server, clearing your browser data or using a private window starts you completely fresh.</p>
+
+      <h2>What it is, and isn't</h2>
+      <p>InvoiceQuick <strong>formats</strong> an invoice. It does not give tax or legal advice, and it doesn't know what your jurisdiction requires an invoice to contain or what tax rate applies to your work. Rules differ by country and region — for example, some places require a specific VAT/GST registration number, sequential invoice numbering, or particular wording. <strong>You're responsible for the correct tax rate and any required fields.</strong> When in doubt, check your local requirements or an accountant.</p>
+
+      <div class="callout">Need recurring invoices, saved clients, a “Pay now” link, or automatic overdue reminders? Those are coming in InvoiceQuick Pro — there's a waitlist on the <a href="./#builder">home page</a>. Or have <a href="https://copperbaytech.com" target="_blank" rel="noopener noreferrer">Copper Bay</a> set up your billing for you.</div>
+    </div>
+  </article>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="wrap foot">
+    <div>
+      <a class="brand small" href="./" aria-label="InvoiceQuick — homepage">
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="11" y="6" width="33" height="46" rx="4" fill="#13525a"/>
+          <line x1="18" y1="17" x2="37" y2="17" stroke="#faf8f4" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="43" cy="44" r="13" fill="#bf6b3c"/>
+          <text x="43" y="49.4" font-family="Fraunces,Georgia,serif" font-size="17" font-weight="700" fill="#faf8f4" text-anchor="middle">$</text>
+        </svg>
+        <span class="wordmark">InvoiceQuick</span>
+      </a>
+      <p class="fine">Formats your invoice — not tax or legal advice.</p>
+    </div>
+    <nav class="foot-nav" aria-label="Footer navigation">
+      <a href="./">Make an invoice</a>
+      <a href="https://dukotah.github.io/complykit/" target="_blank" rel="noopener noreferrer">ComplyKit</a>
+      <a href="https://copperbaytech.com" target="_blank" rel="noopener noreferrer">Get it built for you &rarr;</a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <p class="madeby">A <a href="https://copperbaytech.com" target="_blank" rel="noopener noreferrer">Copper Bay Labs</a> product.</p>
+  </div>
+</footer>
+</body>
+</html>

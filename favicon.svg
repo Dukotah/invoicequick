@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="InvoiceQuick">
+  <rect width="64" height="64" rx="14" fill="#faf8f4"/>
+  <rect x="13" y="8" width="31" height="44" rx="4" fill="#13525a"/>
+  <line x1="19" y1="18" x2="38" y2="18" stroke="#faf8f4" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="19" y1="25" x2="38" y2="25" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="19" y1="32" x2="32" y2="32" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="44" cy="44" r="13" fill="#bf6b3c"/>
+  <text x="44" y="49.6" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#faf8f4" text-anchor="middle">$</text>
+</svg>

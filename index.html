@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InvoiceQuick — free invoice generator, PDF in 10 seconds, no signup</title>
+<meta name="description" content="Fill in your client and line items, pick a currency, and download a clean PDF invoice in seconds. 100% in your browser — no signup, no ads, nothing uploaded. Free.">
+<link rel="canonical" href="https://dukotah.github.io/invoicequick/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InvoiceQuick">
+<meta property="og:title" content="InvoiceQuick — free invoice generator, PDF in seconds">
+<meta property="og:description" content="Make a clean, professional invoice and download it as a PDF in seconds. Runs entirely in your browser — no signup, nothing uploaded. Free.">
+<meta property="og:url" content="https://dukotah.github.io/invoicequick/">
+<meta property="og:image" content="https://dukotah.github.io/invoicequick/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#faf8f4">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"InvoiceQuick","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free client-side invoice generator. Enter client and line items and download a clean PDF invoice in seconds. Runs entirely in the browser; nothing is uploaded.","publisher":{"@type":"Organization","name":"Copper Bay Labs","url":"https://copperbaytech.com"}}
+</script>
+<link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="masthead" role="banner">
+  <div class="wrap hdr-bar">
+    <a class="brand" href="./" aria-label="InvoiceQuick — go to homepage">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="11" y="6" width="33" height="46" rx="4" fill="#13525a"/>
+        <line x1="18" y1="17" x2="37" y2="17" stroke="#faf8f4" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="18" y1="24" x2="37" y2="24" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="18" y1="31" x2="31" y2="31" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="43" cy="44" r="13" fill="#bf6b3c"/>
+        <text x="43" y="49.4" font-family="Fraunces,Georgia,serif" font-size="17" font-weight="700" fill="#faf8f4" text-anchor="middle">$</text>
+      </svg>
+      <span class="wordmark">InvoiceQuick</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="about.html">How it works</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Free invoice generator</p>
+      <h1>Send a clean invoice in the next two minutes.</h1>
+      <p class="lede">Fill in your client and a few line items, pick a currency, and <strong>download a polished PDF</strong> — no signup, no watermark, no ads. Everything runs <strong>in your browser</strong>, so your numbers never leave this tab.</p>
+      <div class="btn-row">
+        <a class="btn primary large" href="#builder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2Z"/><path d="M9 13h6"/><path d="M9 17h4"/></svg>
+          Make my invoice
+        </a>
+        <a class="btn large" href="about.html">How it works</a>
+      </div>
+      <p class="trust-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        <span><strong>100% in your browser.</strong> Your invoice and client details never leave this tab. No upload. No signup.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="builder" id="builder" tabindex="-1" aria-label="Invoice builder">
+    <div class="wrap" style="max-width:1180px">
+      <div class="builder-wrap">
+
+        <!-- ---------- form ---------- -->
+        <form class="quiz" id="invForm" autocomplete="on" novalidate>
+          <div class="quiz-head">
+            <h2 class="quiz-title">Build your invoice</h2>
+            <p class="quiz-sub">It updates live on the right. Nothing is sent anywhere — your work autosaves only in this browser.</p>
+          </div>
+
+          <fieldset class="qz-group">
+            <legend>Your business</legend>
+            <div class="field">
+              <label for="bizName">Your name or business</label>
+              <input id="bizName" name="bizName" type="text" placeholder="Acme Studio" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="bizDetails">Address &amp; contact <span class="opt">(optional)</span></label>
+              <textarea id="bizDetails" name="bizDetails" placeholder="123 Market St&#10;San Francisco, CA 94103&#10;you@acme.studio"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="qz-group">
+            <legend>Bill to</legend>
+            <div class="field">
+              <label for="clientName">Client name or company</label>
+              <input id="clientName" name="clientName" type="text" placeholder="Globex Inc.">
+            </div>
+            <div class="field">
+              <label for="clientDetails">Client address &amp; contact <span class="opt">(optional)</span></label>
+              <textarea id="clientDetails" name="clientDetails" placeholder="456 Industrial Ave&#10;Austin, TX 78701&#10;ap@globex.com"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="qz-group">
+            <legend>Invoice details</legend>
+            <div class="two-col">
+              <div class="field">
+                <label for="invNumber">Invoice number</label>
+                <input id="invNumber" name="invNumber" type="text" placeholder="INV-001">
+              </div>
+              <div class="field">
+                <label for="currency">Currency</label>
+                <select id="currency" name="currency">
+                  <option value="USD">USD — US Dollar ($)</option>
+                  <option value="EUR">EUR — Euro (€)</option>
+                  <option value="GBP">GBP — British Pound (£)</option>
+                  <option value="CAD">CAD — Canadian Dollar ($)</option>
+                  <option value="AUD">AUD — Australian Dollar ($)</option>
+                  <option value="NZD">NZD — NZ Dollar ($)</option>
+                  <option value="JPY">JPY — Japanese Yen (¥)</option>
+                  <option value="INR">INR — Indian Rupee (₹)</option>
+                  <option value="SGD">SGD — Singapore Dollar ($)</option>
+                  <option value="CHF">CHF — Swiss Franc</option>
+                  <option value="SEK">SEK — Swedish Krona</option>
+                  <option value="ZAR">ZAR — South African Rand</option>
+                  <option value="BRL">BRL — Brazilian Real (R$)</option>
+                  <option value="MXN">MXN — Mexican Peso ($)</option>
+                  <option value="AED">AED — UAE Dirham</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="issueDate">Issue date</label>
+                <input id="issueDate" name="issueDate" type="date">
+              </div>
+              <div class="field">
+                <label for="dueDate">Due date <span class="opt">(optional)</span></label>
+                <input id="dueDate" name="dueDate" type="date">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="qz-group">
+            <legend>Line items</legend>
+            <div class="items" id="items">
+              <div class="items-head" aria-hidden="true">
+                <span>Description</span>
+                <span class="ih-right">Qty</span>
+                <span class="ih-right">Unit price</span>
+                <span class="ih-right">Amount</span>
+                <span></span>
+              </div>
+              <!-- rows injected by app.js -->
+            </div>
+            <button type="button" class="btn add-row" id="addItem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              Add line item
+            </button>
+          </fieldset>
+
+          <fieldset class="qz-group">
+            <legend>Tax &amp; discount</legend>
+            <div class="two-col">
+              <div class="field">
+                <label for="taxLabel">Tax label</label>
+                <input id="taxLabel" name="taxLabel" type="text" placeholder="Sales tax / VAT / GST">
+              </div>
+              <div class="field">
+                <label for="taxRate">Tax rate <span class="opt">(%)</span></label>
+                <input id="taxRate" name="taxRate" type="number" inputmode="decimal" min="0" max="100" step="0.01" placeholder="0">
+              </div>
+              <div class="field">
+                <label for="discount">Discount <span class="opt">(flat amount)</span></label>
+                <input id="discount" name="discount" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0">
+              </div>
+            </div>
+            <p class="field-hint">Tax applies to the subtotal after any discount.</p>
+          </fieldset>
+
+          <fieldset class="qz-group">
+            <legend>Notes &amp; payment terms <span class="opt">(optional)</span></legend>
+            <div class="field">
+              <textarea id="notes" name="notes" placeholder="Payment due within 14 days. Bank transfer to&#10;Acct 0000 0000 — thank you for your business!"></textarea>
+            </div>
+          </fieldset>
+
+          <div class="quiz-actions">
+            <button type="button" class="btn ghost" id="btnReset">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+              Start over
+            </button>
+            <button type="button" class="btn" id="btnLoad">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+              Load .json
+            </button>
+            <input id="loadFile" type="file" accept="application/json,.json" hidden>
+          </div>
+        </form>
+
+        <!-- ---------- live preview ---------- -->
+        <div class="preview" aria-label="Invoice preview">
+          <div class="preview-stick">
+            <div class="export-bar">
+              <span class="export-label">Your invoice</span>
+              <div class="export-btns">
+                <button type="button" class="exp-btn" id="btnPrint" title="Opens your browser's print dialog — choose “Save as PDF”.">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>
+                  <span class="exp-default">Download PDF</span>
+                </button>
+                <button type="button" class="exp-btn" id="btnHtml">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2Z"/></svg>
+                  <span class="exp-default">.html</span><span class="exp-done">Saved ✓</span>
+                </button>
+                <button type="button" class="exp-btn" id="btnSave">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z"/><path d="M17 21v-8H7v8M7 3v5h8"/></svg>
+                  <span class="exp-default">.json</span><span class="exp-done">Saved ✓</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="preview-body">
+            <article class="invoice-doc" id="invoice" aria-live="polite">
+              <!-- rendered by app.js -->
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="detect">
+    <div class="wrap">
+      <p class="eyebrow">What you get</p>
+      <h2 class="detect-title">A real invoice, not a sign-up wall</h2>
+      <p class="detect-sub">Most "free" invoice generators gate the download, stamp a watermark, or email you forever. InvoiceQuick just makes the invoice.</p>
+      <div class="detect-grid">
+        <div class="feature">
+          <span class="feat-icon">PDF</span>
+          <h3>One-click PDF</h3>
+          <p>Download a clean, print-ready PDF using your browser's built-in “Save as PDF” — no watermark, no account.</p>
+        </div>
+        <div class="feature">
+          <span class="feat-icon">∑</span>
+          <h3>Totals done for you</h3>
+          <p>Line items, subtotal, flat discount, and a tax rate you name (VAT, GST, sales tax) — all calculated live.</p>
+        </div>
+        <div class="feature">
+          <span class="feat-icon">15+</span>
+          <h3>Any currency</h3>
+          <p>USD, EUR, GBP, JPY, INR and more, formatted correctly for each — so it reads right wherever your client is.</p>
+        </div>
+        <div class="feature">
+          <span class="feat-icon">↺</span>
+          <h3>Reusable</h3>
+          <p>Save an invoice as a small <code>.json</code> file and load it next month to re-bill in seconds. It also autosaves in this browser.</p>
+        </div>
+        <div class="feature">
+          <span class="feat-icon">🔒</span>
+          <h3>Actually private</h3>
+          <p>There's no server. Your rates, clients, and amounts never leave the tab — nothing to leak, nothing to mine.</p>
+        </div>
+        <div class="feature">
+          <span class="feat-icon">↧</span>
+          <h3>Portable file</h3>
+          <p>Prefer to keep the source? Download a standalone <code>.html</code> invoice you can reopen or print on any device.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps">
+    <div class="wrap">
+      <h2 class="steps-title">Invoice in three steps</h2>
+      <div class="step-grid">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>Fill in the details</h3>
+          <p>Your business, the client, and your line items. The invoice on the right updates as you type.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>Pick currency &amp; tax</h3>
+          <p>Choose a currency and add a tax rate or discount if you need one. Totals recalculate instantly.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>Download &amp; send</h3>
+          <p>Hit Download PDF, choose “Save as PDF,” and email it. Save the <code>.json</code> to reuse it later.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="suite">
+    <div class="wrap">
+      <p class="eyebrow">More free tools</p>
+      <h2 class="suite-title">From the Copper Bay Labs workshop</h2>
+      <p class="suite-sub">Small, free, no-signup tools that run entirely in your browser — for people shipping real work fast.</p>
+      <div class="suite-grid">
+        <div class="feature">
+          <h3><a href="https://dukotah.github.io/complykit/" target="_blank" rel="noopener noreferrer">ComplyKit →</a></h3>
+          <p>Generate a privacy policy, terms, and a cookie-consent banner — GDPR &amp; CCPA aware.</p>
+        </div>
+        <div class="feature">
+          <h3><a href="https://dukotah.github.io/shipsafe/" target="_blank" rel="noopener noreferrer">ShipSafe →</a></h3>
+          <p>Paste your URL for a plain-English report on the ADA &amp; privacy gaps that get sites sued.</p>
+        </div>
+        <div class="feature">
+          <h3><a href="https://dukotah.github.io/leakcheck/" target="_blank" rel="noopener noreferrer">LeakCheck →</a></h3>
+          <p>Paste code or your <code>.env</code> to find exposed API keys and secrets — 100% in your browser.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap narrow">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="faq-title">Questions, answered</h2>
+      <details>
+        <summary>Is it really free, with no watermark?</summary>
+        <p>Yes. There's no signup, no watermark on the invoice, no ads, and no “upgrade to download.” InvoiceQuick is a free tool from Copper Bay Labs.</p>
+      </details>
+      <details>
+        <summary>Where does my data go?</summary>
+        <p>Nowhere. There is no InvoiceQuick server. Everything you type stays in your browser tab; your work autosaves only to this browser's local storage. Clearing your browser data or using a private window wipes it.</p>
+      </details>
+      <details>
+        <summary>How do I get a PDF?</summary>
+        <p>Click <strong>Download PDF</strong>. Your browser's print dialog opens with just the invoice on the page — choose <strong>“Save as PDF”</strong> as the destination. This uses your browser's native PDF export, so it works offline and needs no plugin.</p>
+      </details>
+      <details>
+        <summary>Can I reuse an invoice next month?</summary>
+        <p>Yes — click <strong>.json</strong> to save the invoice as a small file, then <strong>Load .json</strong> later to bring it all back. Bump the invoice number and date and you're done.</p>
+      </details>
+      <details>
+        <summary>Does it do recurring invoices, reminders, or online payment?</summary>
+        <p>Not in the free tool — it's a fast one-off generator by design. Automatic numbering, saved clients, payment links, and reminders are on the roadmap for InvoiceQuick Pro; there's a waitlist at the bottom of the page.</p>
+      </details>
+      <details>
+        <summary>Is this legal/tax advice?</summary>
+        <p>No. InvoiceQuick formats the invoice; it doesn't determine what tax rate you owe or what your invoice must legally include in your country. Check your local requirements (and the right tax rate) yourself.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<section class="upsell" aria-labelledby="upsell-h" style="border-top:1px solid var(--line,#e7e1d8);padding:3.5rem 0;text-align:center">
+  <div class="wrap">
+    <h2 id="upsell-h" style="margin:0 0 .6rem;font-size:1.4rem">Bill the same clients every month?</h2>
+    <p style="max-width:52ch;margin:0 auto 1.4rem;color:var(--muted,#665f54)">InvoiceQuick Pro will save your clients, auto-number invoices, add a “Pay now” link, and chase overdue invoices for you — be first to know when it lands.</p>
+    <div style="display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap;align-items:center">
+      <a class="btn primary" href="mailto:contact@copperbaytech.com?subject=InvoiceQuick%20Pro%20waitlist&amp;body=I%27d%20use%20saved%20clients%2C%20auto-numbering%2C%20and%20payment%20links.%20Notify%20me%20at%20launch.">Join the Pro waitlist</a>
+      <a href="https://copperbaytech.com" target="_blank" rel="noopener noreferrer" style="font-weight:600">Or have Copper Bay set up your billing <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="wrap foot">
+    <div>
+      <a class="brand small" href="./" aria-label="InvoiceQuick — homepage">
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="11" y="6" width="33" height="46" rx="4" fill="#13525a"/>
+          <line x1="18" y1="17" x2="37" y2="17" stroke="#faf8f4" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="18" y1="24" x2="37" y2="24" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="43" cy="44" r="13" fill="#bf6b3c"/>
+          <text x="43" y="49.4" font-family="Fraunces,Georgia,serif" font-size="17" font-weight="700" fill="#faf8f4" text-anchor="middle">$</text>
+        </svg>
+        <span class="wordmark">InvoiceQuick</span>
+      </a>
+      <p class="fine">Formats your invoice — not tax or legal advice.</p>
+    </div>
+    <nav class="foot-nav" aria-label="Footer navigation">
+      <a href="about.html">How it works</a>
+      <a href="https://dukotah.github.io/complykit/" target="_blank" rel="noopener noreferrer">ComplyKit</a>
+      <a href="https://dukotah.github.io/shipsafe/" target="_blank" rel="noopener noreferrer">ShipSafe</a>
+      <a href="https://copperbaytech.com" target="_blank" rel="noopener noreferrer">Get it built for you &rarr;</a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <p class="madeby">A <a href="https://copperbaytech.com" target="_blank" rel="noopener noreferrer">Copper Bay Labs</a> product.</p>
+  </div>
+</footer>
+
+<script src="app.js?v=1"></script>
+</body>
+</html>
