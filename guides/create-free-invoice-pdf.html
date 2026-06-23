@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Create a Free Invoice PDF — What to Include, How to Export, How to Get Paid</title>
+<meta name="description" content="Everything that should go on a professional invoice — numbering, payment terms, when to charge VAT/GST — and how to download a clean PDF in seconds with no signup.">
+<link rel="canonical" href="https://labs.copperbaytech.com/invoicequick/guides/create-free-invoice-pdf.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="InvoiceQuick">
+<meta property="og:title" content="How to Create a Free Invoice PDF — What to Include, How to Export, How to Get Paid">
+<meta property="og:description" content="Everything that should go on a professional invoice — numbering, payment terms, when to charge VAT/GST — and how to download a clean PDF in seconds with no signup.">
+<meta property="og:url" content="https://labs.copperbaytech.com/invoicequick/guides/create-free-invoice-pdf.html">
+<meta property="og:image" content="https://labs.copperbaytech.com/invoicequick/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#faf8f4">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to Create a Free Invoice PDF","description":"How to create a professional invoice PDF with no signup: what fields every invoice must include, how to number invoices sequentially, how to handle payment terms and tax, and how to export a clean PDF from your browser.","totalTime":"PT3M","tool":{"@type":"HowToTool","name":"InvoiceQuick","url":"https://labs.copperbaytech.com/invoicequick/"},"step":[{"@type":"HowToStep","name":"Fill in your business and client details","text":"Enter your name or business, the client's name and address, and a unique sequential invoice number."},{"@type":"HowToStep","name":"Add your line items","text":"Describe each service or product sold, its quantity, and the unit price. The invoice preview updates as you type."},{"@type":"HowToStep","name":"Set currency, tax, and payment terms","text":"Choose the correct currency, add a tax rate and label (VAT, GST, sales tax) if applicable, and write your payment instructions and bank details in the Notes field."},{"@type":"HowToStep","name":"Download the PDF","text":"Click Download PDF. Your browser's print dialog opens with just the invoice on the page. Select Save as PDF as the destination — no plugin, no upload, no watermark."},{"@type":"HowToStep","name":"Send and save","text":"Attach the PDF to an email with a subject line that includes the invoice number and due date. Save the .json file to reload and re-bill the same client next month."}],"mainEntity":{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a PDF invoice legally valid?","acceptedAnswer":{"@type":"Answer","text":"Yes — the format doesn't determine legal validity; the content does. A PDF invoice with all required fields (your details, client details, invoice number, date, itemized amounts, total, and payment terms) is as legally valid as one from any paid accounting software. If you're VAT or GST registered, your jurisdiction may additionally require you to include your registration number and the label 'Tax Invoice' — check your local rules."}},{"@type":"Question","name":"What invoice number should I use for my first invoice?","acceptedAnswer":{"@type":"Answer","text":"INV-001. Start at 1 and go up sequentially. You can prefix by year (2026-001) or client code (ACME-001) if that suits your workflow, but simple sequential numbering with no gaps is what accountants and tax authorities expect. Never reuse a number."}},{"@type":"Question","name":"Can I invoice in euros or pounds if I'm based in the US?","acceptedAnswer":{"@type":"Answer","text":"Yes. The invoice currency is whatever you and your client agree. InvoiceQuick supports USD, EUR, GBP, CAD, AUD, NZD, JPY, INR, SGD, CHF, SEK, ZAR, BRL, MXN, and AED — formatted correctly for each."}},{"@type":"Question","name":"When do I need to charge VAT or GST on my invoices?","acceptedAnswer":{"@type":"Answer","text":"Only if you're registered above your jurisdiction's threshold. In the UK, VAT registration is required once your taxable turnover exceeds £90,000/year; below that you cannot charge VAT. In Australia GST registration kicks in at AUD $75,000. In Canada the HST/GST threshold is CAD $30,000 (small supplier threshold). In the US, freelancers providing services generally don't collect sales tax (services are exempt in most states). If you're not registered, leave the tax field at 0% — do not invent a tax rate."}},{"@type":"Question","name":"Can I reuse InvoiceQuick for the same client each month?","acceptedAnswer":{"@type":"Answer","text":"Yes. After generating your invoice, click the .json button to save the invoice as a small file. Next billing cycle, click Load .json to bring it all back, update the invoice number and dates, and download a new PDF in under a minute. Your data also autosaves in your browser between sessions."}},{"@type":"Question","name":"What should I do if a client doesn't pay?","acceptedAnswer":{"@type":"Answer","text":"A PDF invoice is a legal payment demand. Follow up with a short email on the due date, then again at 7 and 14 days overdue — most late payments are administrative delays, not refusals. If you're in the UK or EU, you can charge statutory late-payment interest on commercial debts (8% over base rate in the UK under the Late Payment of Commercial Debts Act). In the US, any interest you charge must be stated in writing on the invoice itself. For persistent non-payment, a solicitor's letter or small claims filing is the next step."}}]}}
+</script>
+<link rel="stylesheet" href="../styles.css?v=1">
+<style>
+  .doc .lede{font-size:clamp(17px,2.3vw,20px);color:var(--muted)}
+  .doc h2{scroll-margin-top:80px}
+  .doc h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:19px;margin:22px 0 6px;letter-spacing:-.01em}
+  .toc{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 6px;padding:0;list-style:none}
+  .toc a{display:inline-block;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;color:var(--muted)}
+  .toc a:hover{border-color:var(--bay);color:var(--ink);text-decoration:none}
+  .callout{background:var(--warn-bg);border-left:4px solid var(--warn);border-radius:0 10px 10px 0;padding:14px 18px;margin:22px 0;font-size:15.5px;color:#5a3e10}
+  .callout.tip{background:var(--pass-bg);border-left-color:var(--pass);color:#1b4d30}
+  .steps-ol{margin:18px 0;padding-left:0;list-style:none;counter-reset:step}
+  .steps-ol>li{position:relative;padding:4px 0 22px 50px;counter-increment:step;border-bottom:1px solid var(--line)}
+  .steps-ol>li:last-child{border-bottom:none}
+  .steps-ol>li::before{content:counter(step);position:absolute;left:0;top:4px;width:32px;height:32px;border-radius:50%;background:var(--copper);color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif}
+  .steps-ol>li strong.step-title{display:block;font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:19px;letter-spacing:-.01em;margin-bottom:6px}
+  .doc code.inline{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;background:var(--line-2,#f0ebe2);padding:2px 6px;border-radius:5px}
+  pre{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;overflow-x:auto;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.6;margin:12px 0}
+  pre code{background:none;padding:0;font-size:inherit}
+  .checklist{margin:14px 0;padding-left:0;list-style:none}
+  .checklist li{padding:5px 0 5px 26px;position:relative;border-bottom:1px solid var(--line)}
+  .checklist li:last-child{border-bottom:none}
+  .checklist li::before{content:"✓";position:absolute;left:0;top:5px;color:var(--pass);font-weight:700;font-size:15px}
+  .tax-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+  .tax-table th{text-align:left;padding:10px 12px;background:var(--surface);border-bottom:2px solid var(--line);font-weight:600}
+  .tax-table td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  .tax-table tr:last-child td{border-bottom:none}
+  .suite{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 6px}
+  .suite a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);transition:box-shadow .15s,transform .15s,border-color .15s}
+  .suite a:hover{text-decoration:none;box-shadow:var(--shadow-lift);transform:translateY(-2px);border-color:var(--line-2)}
+  .suite .s-name{font-family:"Fraunces",serif;font-weight:600;font-size:17px;color:var(--ink);display:block;margin:0 0 4px}
+  .suite p{color:var(--muted);font-size:14px;margin:0}
+  .suite .s-tag{display:inline-block;margin-bottom:8px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--bay);background:var(--bay-tint,#e3eeef);border:1px solid #cfe1e3;border-radius:6px;padding:2px 8px}
+  .faq-section{margin:18px 0}
+  .faq-section details{border-bottom:1px solid var(--line);padding:14px 0}
+  .faq-section details:first-child{border-top:1px solid var(--line)}
+  .faq-section summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .faq-section summary::-webkit-details-marker{display:none}
+  .faq-section summary::after{content:"+";font-size:20px;color:var(--muted);flex-shrink:0}
+  .faq-section details[open] summary::after{content:"\2212"}
+  .faq-section details p{margin:12px 0 4px;color:var(--muted)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="masthead" role="banner">
+  <div class="wrap hdr-bar">
+    <a class="brand" href="../" aria-label="InvoiceQuick — go to homepage">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="11" y="6" width="33" height="46" rx="4" fill="#13525a"/>
+        <line x1="18" y1="17" x2="37" y2="17" stroke="#faf8f4" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="18" y1="24" x2="37" y2="24" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="18" y1="31" x2="31" y2="31" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="43" cy="44" r="13" fill="#bf6b3c"/>
+        <text x="43" y="49.4" font-family="Fraunces,Georgia,serif" font-size="17" font-weight="700" fill="#faf8f4" text-anchor="middle">$</text>
+      </svg>
+      <span class="wordmark">InvoiceQuick</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="../about.html">How it works</a>
+      <a href="create-free-invoice-pdf.html" aria-current="page">Invoice guides</a>
+      <a href="../">Make my invoice</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="doc">
+  <div class="wrap narrow">
+    <p class="eyebrow" style="text-align:left">Invoice guide</p>
+    <h1>How to Create a Free Invoice PDF — What to Include, How to Export, How to Get Paid</h1>
+    <p class="lede">Most &ldquo;free invoice generators&rdquo; make you sign up before you can download anything. This guide covers what every professional invoice must contain, how to number and send invoices correctly, when to charge VAT or GST, and how to download a clean watermark-free PDF in under three minutes — no account required.</p>
+
+    <ul class="toc" aria-label="On this page">
+      <li><a href="#what-to-include">What to include</a></li>
+      <li><a href="#numbering">Invoice numbering</a></li>
+      <li><a href="#payment-terms">Payment terms</a></li>
+      <li><a href="#tax">VAT, GST &amp; sales tax</a></li>
+      <li><a href="#generate-pdf">Generating the PDF</a></li>
+      <li><a href="#sending">Sending the invoice</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+    <h2 id="what-to-include">What a professional invoice must include</h2>
+    <p>An invoice is a commercial document and, if you&rsquo;re VAT or GST registered, a legal one. The more complete it is, the faster it gets paid and the better it holds up if a dispute arises. Every invoice should contain:</p>
+
+    <ul class="checklist">
+      <li><strong>The word &ldquo;Invoice&rdquo;</strong> — or &ldquo;Tax Invoice&rdquo; if you&rsquo;re VAT/GST-registered (required in most jurisdictions that have a VAT/GST system)</li>
+      <li><strong>A unique invoice number</strong> — sequential, no gaps; essential for your accounting records and for client reference when they pay</li>
+      <li><strong>Issue date</strong> — when you raised the invoice; this is the date tax authorities and payment-term clocks refer to</li>
+      <li><strong>Due date</strong> — when payment is expected; omitting this makes the invoice due &ldquo;whenever&rdquo; with no enforceable deadline</li>
+      <li><strong>Your full legal name (or business name), address, and contact email</strong></li>
+      <li><strong>Client&rsquo;s full name and address</strong> — the legal entity you&rsquo;re billing; their accounts payable team needs this to match it to a purchase order</li>
+      <li><strong>Itemized line items</strong> — description of each service or product, quantity, unit price, and line total; vague entries like &ldquo;Services — $2,400&rdquo; get questioned by both clients and tax authorities</li>
+      <li><strong>Subtotal, discount (if any), tax with rate and label, and total amount due</strong></li>
+      <li><strong>Currency</strong> — critical if you work with international clients; never leave it ambiguous</li>
+      <li><strong>Payment instructions</strong> — bank details, transfer method, or payment link; without this, payment is impossible regardless of how professional the rest of the invoice looks</li>
+    </ul>
+
+    <p>If you&rsquo;re VAT or GST registered, also include your registration number. Many jurisdictions require it on every tax invoice — the client needs it to reclaim the input tax.</p>
+
+    <h2 id="numbering">Invoice numbering: keep it simple and sequential</h2>
+    <p>Sequential numbering — INV-001, INV-002, INV-003 — is the standard and what most accountants expect. Variations that work well in practice:</p>
+    <ul style="margin:10px 0 10px 20px;padding:0">
+      <li style="margin-bottom:6px"><strong>Year-prefixed:</strong> 2026-001, 2026-002 — makes it easy to see at a glance which financial year the invoice belongs to</li>
+      <li style="margin-bottom:6px"><strong>Client-prefixed:</strong> ACME-001, GLOBEX-001 — useful if you have multiple clients and want to track per-client history</li>
+      <li style="margin-bottom:6px"><strong>Combined:</strong> ACME-2026-001 — works for agencies with long-standing clients</li>
+    </ul>
+    <p>What to avoid: random numbers, gaps in the sequence (INV-001, INV-004), or reusing a number on a new invoice. Tax authorities in the UK, EU, and Australia flag non-sequential invoice numbering as a potential record-keeping failure. In the event of a VAT inspection, every gap in the sequence requires an explanation.</p>
+    <p><strong>First invoice ever?</strong> Start at INV-001. Don&rsquo;t overthink it.</p>
+
+    <h2 id="payment-terms">Payment terms: what to write and why it matters</h2>
+    <p>Payment terms set the legal clock for when money is owed. The most common options:</p>
+
+    <table class="tax-table">
+      <thead>
+        <tr>
+          <th>Term</th>
+          <th>What it means</th>
+          <th>When to use it</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Due on receipt</strong></td>
+          <td>Pay immediately on receiving the invoice</td>
+          <td>One-off work, new clients, digital products</td>
+        </tr>
+        <tr>
+          <td><strong>NET 14</strong></td>
+          <td>Payment due within 14 days of invoice date</td>
+          <td>Small businesses, fast-moving projects</td>
+        </tr>
+        <tr>
+          <td><strong>NET 30</strong></td>
+          <td>Payment due within 30 days of invoice date</td>
+          <td>Standard US B2B; larger companies often require this</td>
+        </tr>
+        <tr>
+          <td><strong>50% upfront / 50% on completion</strong></td>
+          <td>Two invoices, or a deposit credit on the final invoice</td>
+          <td>Larger projects; protects against non-payment</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Put your payment instructions in the notes field of every invoice — don&rsquo;t make the client email to ask. Include: bank account number and sort/routing code, IBAN for international transfers, or a direct link to PayPal, Wise, or Stripe if you use one.</p>
+    <p>If you want to charge late-payment interest, state the rate explicitly on the invoice (<em>&ldquo;Overdue balances accrue 1.5% per month&rdquo;</em>). In the UK, the Late Payment of Commercial Debts Act entitles you to charge 8% over base rate on business-to-business invoices without stating it — but stating it makes it impossible to dispute.</p>
+
+    <h2 id="tax">VAT, GST, and sales tax: when to charge, what to write</h2>
+    <p>Tax obligations depend entirely on where you&rsquo;re based, where your client is based, and whether you&rsquo;ve crossed your jurisdiction&rsquo;s registration threshold. The short version:</p>
+
+    <table class="tax-table">
+      <thead>
+        <tr>
+          <th>Where you are</th>
+          <th>Tax type</th>
+          <th>Registration threshold</th>
+          <th>Label to use</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>United Kingdom</td>
+          <td>VAT</td>
+          <td>&pound;90,000/year taxable turnover</td>
+          <td>VAT @ 20% (standard rate)</td>
+        </tr>
+        <tr>
+          <td>EU (varies by country)</td>
+          <td>VAT</td>
+          <td>&euro;10,000&ndash;&euro;85,000 (varies by country)</td>
+          <td>VAT @ [rate]%</td>
+        </tr>
+        <tr>
+          <td>Australia</td>
+          <td>GST</td>
+          <td>AUD $75,000/year</td>
+          <td>GST @ 10%</td>
+        </tr>
+        <tr>
+          <td>Canada</td>
+          <td>GST / HST</td>
+          <td>CAD $30,000/year</td>
+          <td>GST @ 5% or HST @ [province rate]%</td>
+        </tr>
+        <tr>
+          <td>New Zealand</td>
+          <td>GST</td>
+          <td>NZD $60,000/year</td>
+          <td>GST @ 15%</td>
+        </tr>
+        <tr>
+          <td>United States</td>
+          <td>Sales tax (state-specific)</td>
+          <td>Varies by state (economic nexus rules)</td>
+          <td>Sales Tax @ [state rate]%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Not registered? Don&rsquo;t charge tax.</strong> If you&rsquo;re below your jurisdiction&rsquo;s threshold, leave the tax field blank or at 0%. Charging a tax you&rsquo;re not registered to collect is fraud in most jurisdictions. If you&rsquo;re unsure about your obligations, ask a local accountant — the cost of that conversation is much lower than the penalty for getting it wrong.
+    </div>
+
+    <p><strong>EU B2B exports (reverse charge):</strong> If you&rsquo;re EU-VAT-registered and billing a VAT-registered business in another EU country, you typically apply the reverse charge mechanism — your invoice shows the net amount with no VAT collected, and includes a line: <em>&ldquo;VAT reverse charged — buyer to account for VAT under Article 194/196 of Directive 2006/112/EC.&rdquo;</em> Include your client&rsquo;s VAT number on the invoice.</p>
+
+    <h2 id="generate-pdf">Generating the PDF with InvoiceQuick</h2>
+    <p>InvoiceQuick runs entirely in your browser. There&rsquo;s no server, no account, and no watermark. Here&rsquo;s the full process:</p>
+
+    <ol class="steps-ol">
+      <li>
+        <strong class="step-title">Fill in your business and client details</strong>
+        <p>Enter your name or business name and your client&rsquo;s name and address. Add your address and contact details in the &ldquo;Address &amp; contact&rdquo; field — these appear on the invoice exactly as entered.</p>
+      </li>
+      <li>
+        <strong class="step-title">Set the invoice number and dates</strong>
+        <p>Enter your sequential invoice number (e.g. INV-042), the issue date (today), and the due date. The invoice preview on the right updates instantly as you type.</p>
+      </li>
+      <li>
+        <strong class="step-title">Add your line items</strong>
+        <p>Click <strong>Add line item</strong> for each service or product. Enter a description, quantity, and unit price — InvoiceQuick calculates the line total and running subtotal automatically. Be specific in the description: &ldquo;Website copywriting — About and Services pages (2,400 words)&rdquo; is better than &ldquo;Copywriting.&rdquo;</p>
+      </li>
+      <li>
+        <strong class="step-title">Set currency, tax, and discount</strong>
+        <p>Pick your currency from the dropdown (USD, EUR, GBP, and 12 more). If you&rsquo;re tax-registered, enter your rate and use the label field to write exactly what will appear on the invoice — &ldquo;VAT @ 20%&rdquo;, &ldquo;GST @ 10%&rdquo;, &ldquo;HST @ 13%&rdquo;. Add a flat discount if you&rsquo;re applying one.</p>
+      </li>
+      <li>
+        <strong class="step-title">Add payment instructions in the Notes field</strong>
+        <p>This is what gets printed at the bottom of the invoice. Include your bank name, account number, sort/routing code or IBAN, or a payment link. Also state your payment terms: <em>&ldquo;Payment due within 14 days. Bank transfer preferred.&rdquo;</em></p>
+      </li>
+      <li>
+        <strong class="step-title">Download the PDF</strong>
+        <p>Click <strong>Download PDF</strong>. Your browser&rsquo;s print dialog opens with only the invoice on the page — no surrounding UI, no header, no watermark. Select <strong>&ldquo;Save as PDF&rdquo;</strong> (Chrome, Edge, Firefox) or <strong>&ldquo;Print to PDF&rdquo;</strong> as the destination. Name the file with the invoice number: <code class="inline">INV-042-ACME.pdf</code>.</p>
+        <p>This uses your browser&rsquo;s native PDF renderer. It works offline, needs no plugin, and produces a clean, professional single-page document at whatever paper size you select (A4 is the global standard; US Letter for US clients).</p>
+      </li>
+    </ol>
+
+    <div class="callout tip">
+      <strong>Reusing the invoice next month:</strong> click <strong>.json</strong> to save the full invoice as a small file. Next billing cycle, click <strong>Load .json</strong> to restore everything — client details, line items, currency, tax rate, payment instructions. Bump the invoice number and issue/due dates and you&rsquo;re done in under a minute.
+    </div>
+
+    <h2 id="sending">Sending the invoice</h2>
+    <p>Attach the PDF to an email. Keep the subject line informative and the body short:</p>
+    <pre><code>Subject: Invoice INV-042 — [Brief description] — Due [date]
+
+Hi [Name],
+
+Please find invoice INV-042 attached for [project name].
+Total: [amount] [currency], due by [date].
+
+Payment details are on the invoice — please transfer to [bank/method].
+Let me know if you have any questions.
+
+[Your name]</code></pre>
+    <p>If your client is a large company, check whether they use a vendor portal (SAP Ariba, Coupa, Bill.com, Tipalti) before emailing. Many enterprise AP departments don&rsquo;t process PDF invoices sent to a generic email address — they require portal submission. Ask your contact before you invoice for the first time.</p>
+    <p><strong>Follow-up cadence for late payment:</strong> on the due date if unpaid, send a short reminder. At 7 days overdue, send a firmer follow-up with the invoice attached again. At 14 days, escalate to a formal overdue notice. Most late payments are administrative delays, not refusals — a calm, prompt follow-up gets most of them resolved before they become disputes.</p>
+
+    <p style="margin:28px 0 8px"><a class="btn primary" href="../">Create my invoice with InvoiceQuick &rarr;</a></p>
+
+    <h2 id="faq">Frequently asked questions</h2>
+    <div class="faq-section">
+      <details open>
+        <summary>Is a PDF invoice legally valid?</summary>
+        <p>Yes — the format doesn&rsquo;t determine legal validity; the content does. A PDF generated in your browser with all required fields (your details, client details, invoice number, date, itemized amounts, total, and payment terms) is as legally valid as one from any paid accounting package. If you&rsquo;re VAT or GST registered, your jurisdiction may additionally require you to include your registration number and the label &ldquo;Tax Invoice&rdquo; — check your local requirements.</p>
+      </details>
+      <details>
+        <summary>What invoice number should I use for my first invoice?</summary>
+        <p>INV-001. Start at 1 and go up sequentially with no gaps. You can prefix by year (2026-001) or client code (ACME-001) if you prefer, but plain sequential numbering is what accountants and tax authorities expect. Never reuse a number on a new invoice, even if you cancel an older one — cancelled invoices should be voided with a note, not recycled.</p>
+      </details>
+      <details>
+        <summary>Can I invoice in euros, pounds, or another currency if I&rsquo;m based in the US?</summary>
+        <p>Yes. The invoice currency is whatever you and your client agree. InvoiceQuick supports USD, EUR, GBP, CAD, AUD, NZD, JPY, INR, SGD, CHF, SEK, ZAR, BRL, and AED, formatted correctly for each locale. For international invoices, make the currency explicit — never leave it ambiguous — and keep a note of the exchange rate on the day for your own accounting records.</p>
+      </details>
+      <details>
+        <summary>When do I need to charge VAT or GST on my invoices?</summary>
+        <p>Only once you&rsquo;re registered above your jurisdiction&rsquo;s threshold (see the tax table above). Below the threshold you cannot charge VAT or GST. In the US, freelancers providing services generally don&rsquo;t collect sales tax — services are exempt in most states — but selling digital products or physical goods may trigger a nexus obligation in the state where your customer is located. If you&rsquo;re unsure, a local accountant&rsquo;s advice costs far less than the penalty for getting it wrong.</p>
+      </details>
+      <details>
+        <summary>Can I reuse InvoiceQuick for the same client each month?</summary>
+        <p>Yes. After generating your invoice, click the <strong>.json</strong> button to save it as a small file. Next billing cycle, click <strong>Load .json</strong> to restore the full invoice — client details, line items, currency, tax rate, and payment instructions. Update the invoice number and dates, download a new PDF, and you&rsquo;re done in under a minute. Your work also autosaves in your browser&rsquo;s local storage between sessions.</p>
+      </details>
+      <details>
+        <summary>What do I do if a client doesn&rsquo;t pay?</summary>
+        <p>A PDF invoice is a legal payment demand. Follow up with a short email on the due date, then again at 7 and 14 days overdue — most late payments are administrative delays that a prompt reminder resolves. If you&rsquo;re in the UK or EU, you can charge statutory late-payment interest on commercial debts (8% over the Bank of England base rate in the UK under the Late Payment of Commercial Debts Act 1998). In the US, any interest must be stated on the invoice itself. For persistent non-payment beyond 30 days: a solicitor&rsquo;s or attorney&rsquo;s letter is often enough to prompt action; small claims court is the next step for amounts within your jurisdiction&rsquo;s limit.</p>
+      </details>
+    </div>
+
+    <h2 style="margin-top:48px">More free tools from Copper Bay Labs</h2>
+    <p>If you&rsquo;re freelancing or running a small business, you&rsquo;ll likely also need to sort out a privacy policy for your website, and check that your site doesn&rsquo;t have any security gaps before clients come looking.</p>
+    <div class="suite">
+      <a href="https://labs.copperbaytech.com/complykit/" target="_blank" rel="noopener noreferrer">
+        <span class="s-tag">Privacy &amp; compliance</span>
+        <span class="s-name">ComplyKit</span>
+        <p>Generate a privacy policy, terms of service, and cookie notice for your site — GDPR &amp; CCPA aware, free, in your browser.</p>
+      </a>
+      <a href="https://labs.copperbaytech.com/shipsafe/" target="_blank" rel="noopener noreferrer">
+        <span class="s-tag">ADA &amp; privacy risk</span>
+        <span class="s-name">ShipSafe</span>
+        <p>Paste your URL for a plain-English report on the accessibility and privacy gaps that get sites sued.</p>
+      </a>
+      <a href="https://labs.copperbaytech.com/hardencheck/" target="_blank" rel="noopener noreferrer">
+        <span class="s-tag">Security headers</span>
+        <span class="s-name">HardenCheck</span>
+        <p>Scan your live site&rsquo;s HTTP headers for missing Content-Security-Policy, HSTS, and other security hardening flags.</p>
+      </a>
+      <a href="https://labs.copperbaytech.com/leakcheck/" target="_blank" rel="noopener noreferrer">
+        <span class="s-tag">Secret scanning</span>
+        <span class="s-name">LeakCheck</span>
+        <p>Paste code or a config file and see exposed API keys and secrets flagged before they reach your repo or client.</p>
+      </a>
+    </div>
+  </div>
+</article>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="wrap foot">
+    <div>
+      <a class="brand small" href="../" aria-label="InvoiceQuick — homepage">
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="11" y="6" width="33" height="46" rx="4" fill="#13525a"/>
+          <line x1="18" y1="17" x2="37" y2="17" stroke="#faf8f4" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="18" y1="24" x2="37" y2="24" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="18" y1="31" x2="31" y2="31" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="43" cy="44" r="13" fill="#bf6b3c"/>
+          <text x="43" y="49.4" font-family="Fraunces,Georgia,serif" font-size="17" font-weight="700" fill="#faf8f4" text-anchor="middle">$</text>
+        </svg>
+        <span class="wordmark">InvoiceQuick</span>
+      </a>
+      <p class="fine">Formats your invoice — not tax or legal advice.</p>
+    </div>
+    <nav class="foot-nav" aria-label="Footer navigation">
+      <a href="../about.html">How it works</a>
+      <a href="create-free-invoice-pdf.html">Invoice guides</a>
+      <a href="https://labs.copperbaytech.com/complykit/" target="_blank" rel="noopener noreferrer">ComplyKit</a>
+      <a href="https://labs.copperbaytech.com/shipsafe/" target="_blank" rel="noopener noreferrer">ShipSafe</a>
+      <a href="https://copperbaytech.com" target="_blank" rel="noopener noreferrer">Get it built for you &rarr;</a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <p class="madeby">A <a href="https://copperbaytech.com" target="_blank" rel="noopener noreferrer">Copper Bay Labs</a> product. Formats invoices only — not tax, legal, or accounting advice.</p>
+  </div>
+</footer>
+
+</body>
+</html>
