@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invoice Legal Requirements &mdash; What Must Be on an Invoice by Law (UK, EU, US, Australia)</title>
+<meta name="description" content="Mandatory invoice fields by country: UK VAT invoices, EU tax invoices under Directive 2006/112/EC, Australian GST tax invoices, Canadian GST/HST invoices, and the US default. With a jurisdiction comparison table.">
+<link rel="canonical" href="https://labs.copperbaytech.com/invoicequick/guides/invoice-legal-requirements.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="InvoiceQuick">
+<meta property="og:title" content="Invoice Legal Requirements &mdash; What Must Be on an Invoice by Law">
+<meta property="og:description" content="Mandatory invoice fields by country: UK VAT invoices, EU tax invoices, Australian GST tax invoices, Canadian GST/HST invoices. Jurisdiction comparison table and InvoiceQuick field mapping.">
+<meta property="og:url" content="https://labs.copperbaytech.com/invoicequick/guides/invoice-legal-requirements.html">
+<meta property="og:image" content="https://labs.copperbaytech.com/invoicequick/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#faf8f4">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Invoice Legal Requirements — What Must Be on an Invoice by Law","description":"Mandatory invoice fields by country: UK VAT invoices, EU tax invoices under Directive 2006/112/EC, Australian GST tax invoices, Canadian GST/HST invoices, and the US default. With jurisdiction comparison table.","url":"https://labs.copperbaytech.com/invoicequick/guides/invoice-legal-requirements.html","datePublished":"2026-11-07","dateModified":"2026-11-07","publisher":{"@type":"Organization","name":"Copper Bay Labs","url":"https://labs.copperbaytech.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://labs.copperbaytech.com/invoicequick/guides/invoice-legal-requirements.html"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is an invoice a legally binding document?","acceptedAnswer":{"@type":"Answer","text":"An invoice is a demand for payment, not a contract in itself. Its enforceability depends on the underlying agreement — a contract, purchase order, or accepted quote that establishes what was agreed. Without an underlying agreement, an invoice alone may not be enough to recover a disputed debt in court, though it is strong evidence of a commercial relationship and the amount claimed."}},{"@type":"Question","name":"Does an invoice need to say 'Tax invoice' or just 'Invoice'?","acceptedAnswer":{"@type":"Answer","text":"In Australia, the ATO requires the exact words 'Tax invoice' on every GST tax invoice — 'Invoice' alone is not sufficient for GST purposes. In the UK and EU, the word 'Invoice' is standard; there is no legal requirement to say 'Tax invoice', though it is common practice. In Canada and the US, no specific wording is prescribed."}},{"@type":"Question","name":"Can I issue an invoice if I'm not VAT or GST registered?","acceptedAnswer":{"@type":"Answer","text":"Yes. A non-registered invoice — called a plain invoice or just an invoice — is a legal payment demand. It must not include a VAT or GST charge, and in the UK you must not display a VAT registration number you do not have. The required fields are fewer: your name and address, an invoice number, the date, the client's name, a description of the work, and the amount due."}},{"@type":"Question","name":"Must I include my VAT or GST registration number on every invoice?","acceptedAnswer":{"@type":"Answer","text":"Yes, if you are registered. In the UK, your VAT registration number must appear on every VAT invoice. In EU member states, your VAT ID is required on every VAT invoice. In Australia, your ABN must appear on every GST tax invoice. In Canada, your GST/HST registration number is required on every invoice where you charge GST/HST. If you are not registered, you must not include a registration number."}},{"@type":"Question","name":"What is a tax point on a UK VAT invoice?","acceptedAnswer":{"@type":"Answer","text":"The tax point is the date on which a VAT liability arises. For most services it is the earlier of the invoice date and the date payment is received. If your invoice date is different from the date the service was delivered or payment received, HMRC requires you to show the tax point separately so that the correct VAT period is clear. For simple invoices where the invoice date equals the supply date, the invoice date also serves as the tax point."}},{"@type":"Question","name":"Do I legally need to include an invoice number?","acceptedAnswer":{"@type":"Answer","text":"Yes, if you are VAT/GST-registered: sequential invoice numbering is required by UK HMRC, EU VAT rules, and Australian ATO rules. Even if you are not registered, sequential invoice numbers are strongly recommended for record-keeping, tax authority compliance audits, and practical reasons (clients need a reference number to process payment and both parties need a number to refer to in correspondence). Never reuse a number; gap-free sequential numbering is what auditors and accountants expect."}},{"@type":"Question","name":"What is a reverse charge invoice?","acceptedAnswer":{"@type":"Answer","text":"A reverse charge invoice is used in EU B2B transactions where the buyer, not the seller, is liable to account for VAT. This applies when a VAT-registered seller in one EU country supplies services to a VAT-registered business in another EU country. The seller issues an invoice showing the net amount with no VAT charged, and adds the note 'Reverse charge — buyer to account for VAT under Article 194/196 of Directive 2006/112/EC'. The buyer then declares the VAT in their own country's VAT return at the local rate. The seller must have the buyer's VAT number to apply the reverse charge."}}]}]}
+</script>
+<link rel="stylesheet" href="../styles.css?v=1">
+<style>
+  .doc .lede{font-size:clamp(17px,2.3vw,20px);color:var(--muted)}
+  .doc h2{scroll-margin-top:80px}
+  .doc h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:19px;margin:22px 0 6px;letter-spacing:-.01em}
+  .toc{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 6px;padding:0;list-style:none}
+  .toc a{display:inline-block;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;color:var(--muted)}
+  .toc a:hover{border-color:var(--bay);color:var(--ink);text-decoration:none}
+  .callout{background:var(--warn-bg);border-left:4px solid var(--warn);border-radius:0 10px 10px 0;padding:14px 18px;margin:22px 0;font-size:15.5px;color:#5a3e10}
+  .callout.tip{background:var(--pass-bg);border-left-color:var(--pass);color:#1b4d30}
+  .req-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+  .req-table th{text-align:left;padding:10px 12px;background:var(--surface);border-bottom:2px solid var(--line);font-weight:600;white-space:nowrap}
+  .req-table td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}
+  .req-table tr:last-child td{border-bottom:none}
+  .req-table .yes{color:#1b4d30;font-weight:600}
+  .req-table .cond{color:#5a3e10}
+  .req-table .dash{color:var(--muted)}
+  .fields-list{margin:14px 0;padding-left:0;list-style:none}
+  .fields-list li{padding:7px 0 7px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .fields-list li:last-child{border-bottom:none}
+  .fields-list strong{display:inline-block;min-width:200px;font-weight:600;color:var(--ink)}
+  .country-block{border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:20px 0;background:var(--surface)}
+  .country-block h3{margin:0 0 4px}
+  .country-block .c-label{display:inline-block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:6px;padding:3px 9px;margin-bottom:12px;color:#2a3f5f;background:#e8f0fb;border:1px solid #b8d0f0}
+  .country-block ul{margin:8px 0 0;padding-left:20px;line-height:1.75}
+  .country-block li{margin-bottom:4px}
+  .suite{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 6px}
+  .suite a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);transition:box-shadow .15s,transform .15s,border-color .15s}
+  .suite a:hover{text-decoration:none;box-shadow:var(--shadow-lift);transform:translateY(-2px);border-color:var(--line-2)}
+  .suite .s-name{font-family:"Fraunces",serif;font-weight:600;font-size:17px;color:var(--ink);display:block;margin:0 0 4px}
+  .suite p{color:var(--muted);font-size:14px;margin:0}
+  .suite .s-tag{display:inline-block;margin-bottom:8px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--bay);background:var(--bay-tint,#e3eeef);border:1px solid #cfe1e3;border-radius:6px;padding:2px 8px}
+  .faq-section{margin:18px 0}
+  .faq-section details{border-bottom:1px solid var(--line);padding:14px 0}
+  .faq-section details:first-child{border-top:1px solid var(--line)}
+  .faq-section summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .faq-section summary::-webkit-details-marker{display:none}
+  .faq-section summary::after{content:"+";font-size:20px;color:var(--muted);flex-shrink:0}
+  .faq-section details[open] summary::after{content:"\2212"}
+  .faq-section details p{margin:12px 0 4px;color:var(--muted)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="masthead" role="banner">
+  <div class="wrap hdr-bar">
+    <a class="brand" href="../" aria-label="InvoiceQuick &mdash; go to homepage">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="11" y="6" width="33" height="46" rx="4" fill="#13525a"/>
+        <line x1="18" y1="17" x2="37" y2="17" stroke="#faf8f4" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="18" y1="24" x2="37" y2="24" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="18" y1="31" x2="31" y2="31" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="43" cy="44" r="13" fill="#bf6b3c"/>
+        <text x="43" y="49.4" font-family="Fraunces,Georgia,serif" font-size="17" font-weight="700" fill="#faf8f4" text-anchor="middle">$</text>
+      </svg>
+      <span class="wordmark">InvoiceQuick</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="create-free-invoice-pdf.html">Create PDF guide</a>
+      <a href="send-invoice-email.html">Send invoice guide</a>
+      <a href="invoice-clients-international.html">International invoicing</a>
+      <a href="freelance-contract-template.html">Freelance contract</a>
+      <a href="statement-of-work-template.html">Statement of work</a>
+      <a href="invoice-payment-terms.html">Payment terms</a>
+      <a href="invoice-legal-requirements.html" aria-current="page">Legal requirements</a>
+      <a href="follow-up-unpaid-invoice.html">Late invoices</a>
+      <a href="handle-disputed-invoice.html">Disputed invoices</a>
+      <a href="../">Make my invoice</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="doc">
+  <div class="wrap narrow">
+    <p class="eyebrow" style="text-align:left">Invoice guide</p>
+    <h1>Invoice Legal Requirements &mdash; What Must Be on an Invoice by Law</h1>
+    <p class="lede">The word &ldquo;invoice&rdquo; has no single legal definition &mdash; but the fields you must include do. Those requirements vary significantly by country and by whether you&rsquo;re registered for VAT, GST, or HST. This guide covers the mandatory fields for UK, EU, Australian, Canadian, and US invoices, with a jurisdiction comparison table and a note on how InvoiceQuick maps to each requirement.</p>
+
+    <div class="callout">
+      <strong>Not legal advice.</strong> This guide describes the requirements of UK HMRC VAT Notice 700, EU VAT Directive 2006/112/EC, Australian ATO GST rules, and Canadian CRA guidelines accurately, but it is educational &mdash; not a legal opinion for your specific situation. Consult a qualified accountant or lawyer for advice on your obligations.
+    </div>
+
+    <ul class="toc" aria-label="On this page">
+      <li><a href="#universal">Universal minimum</a></li>
+      <li><a href="#uk">UK invoices</a></li>
+      <li><a href="#eu">EU invoices</a></li>
+      <li><a href="#australia">Australia</a></li>
+      <li><a href="#canada">Canada</a></li>
+      <li><a href="#us">United States</a></li>
+      <li><a href="#comparison">Comparison table</a></li>
+      <li><a href="#invoicequick">InvoiceQuick mapping</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+    <h2 id="universal">The universal minimum &mdash; what every invoice needs</h2>
+    <p>Even where no specific law prescribes invoice content, these fields are required as a practical matter for an invoice to be enforceable and processable by any accounts payable department:</p>
+    <ul style="margin:10px 0 10px 20px;padding:0;line-height:1.9">
+      <li style="margin-bottom:4px"><strong>Invoice number</strong> &mdash; a unique, sequential reference number</li>
+      <li style="margin-bottom:4px"><strong>Invoice date</strong> &mdash; the date you issued the invoice</li>
+      <li style="margin-bottom:4px"><strong>Your name and business address</strong></li>
+      <li style="margin-bottom:4px"><strong>Client&rsquo;s name and address</strong></li>
+      <li style="margin-bottom:4px"><strong>Description of goods or services</strong> &mdash; specific enough to identify what was supplied</li>
+      <li style="margin-bottom:4px"><strong>Total amount due and currency</strong></li>
+      <li style="margin-bottom:4px"><strong>Payment instructions</strong> &mdash; bank details, payment method, or due date</li>
+    </ul>
+    <p>The country-specific requirements below add fields on top of this baseline, primarily for tax purposes.</p>
+
+    <h2 id="uk">UK invoices</h2>
+
+    <div class="country-block">
+      <span class="c-label">Not VAT-registered</span>
+      <h3>Non-VAT invoice</h3>
+      <p>No legally prescribed format under UK law for businesses below the VAT threshold (&pound;90,000 taxable turnover). The universal minimum above is sufficient. You <strong>must not</strong> display a VAT number or charge VAT if you are not registered.</p>
+    </div>
+
+    <div class="country-block">
+      <span class="c-label">VAT-registered &mdash; standard</span>
+      <h3>Standard VAT invoice</h3>
+      <p>Required by HMRC (VAT Notice 700) for all taxable supplies to VAT-registered businesses, and for any supply where the customer may wish to reclaim input tax:</p>
+      <ul>
+        <li>Unique sequential invoice number</li>
+        <li>Invoice date</li>
+        <li><strong>Tax point</strong> (if different from invoice date)</li>
+        <li>Your business name, address, and <strong>VAT registration number</strong></li>
+        <li>Customer&rsquo;s name and address</li>
+        <li>Description of goods or services</li>
+        <li>For each line: quantity, net amount, VAT rate, VAT amount</li>
+        <li>Total net (excluding VAT), total VAT, total gross (including VAT)</li>
+      </ul>
+    </div>
+
+    <div class="country-block">
+      <span class="c-label">VAT-registered &mdash; simplified</span>
+      <h3>Simplified VAT invoice (VAT-inclusive total under &pound;250)</h3>
+      <p>Allowed for retail and similar supplies where the customer is not expected to reclaim VAT. Requires only:</p>
+      <ul>
+        <li>Your business name, address, and VAT registration number</li>
+        <li>Invoice date</li>
+        <li>Description and quantity of goods or services</li>
+        <li>VAT rate</li>
+        <li>Total amount including VAT (no need to show VAT separately)</li>
+      </ul>
+    </div>
+
+    <h2 id="eu">EU invoices (VAT-registered)</h2>
+    <p>Under <strong>EU VAT Directive 2006/112/EC, Article 226</strong>, all VAT invoices issued by EU-registered businesses must include:</p>
+    <ul style="margin:10px 0 10px 20px;padding:0;line-height:1.9">
+      <li style="margin-bottom:4px">Date of issue</li>
+      <li style="margin-bottom:4px">Sequential invoice number uniquely identifying the invoice</li>
+      <li style="margin-bottom:4px">Supplier&rsquo;s VAT identification number</li>
+      <li style="margin-bottom:4px">Customer&rsquo;s VAT number (required for B2B supplies, particularly cross-border and reverse charge)</li>
+      <li style="margin-bottom:4px">Full name and address of both supplier and customer</li>
+      <li style="margin-bottom:4px">Quantity and description of goods or services</li>
+      <li style="margin-bottom:4px">Date of supply (if different from invoice date)</li>
+      <li style="margin-bottom:4px">Net amount per VAT rate, VAT rate(s) applied, VAT amount</li>
+      <li style="margin-bottom:4px">Total net, total VAT, total gross</li>
+      <li style="margin-bottom:4px">&ldquo;Reverse charge&rdquo; notation (for B2B cross-border supplies where buyer accounts for VAT)</li>
+      <li style="margin-bottom:4px">Reason for VAT exemption (if zero-rated)</li>
+    </ul>
+    <p>Each EU member state may add further requirements in its national VAT implementation. When in doubt, check with a local accountant in the customer&rsquo;s country.</p>
+
+    <h2 id="australia">Australia &mdash; GST tax invoices</h2>
+    <p>Required by the ATO for all GST-registered entities when making taxable supplies:</p>
+
+    <div class="callout tip">
+      <strong>The &ldquo;Tax invoice&rdquo; label is mandatory.</strong> Australian law (A New Tax System (Goods and Services Tax) Act 1999) requires the document to be <em>labeled</em> &ldquo;Tax invoice&rdquo; using that exact phrase. A document labeled only &ldquo;Invoice&rdquo; does not qualify as a GST tax invoice and cannot be used by the buyer to claim GST credits.
+    </div>
+
+    <ul style="margin:10px 0 10px 20px;padding:0;line-height:1.9">
+      <li style="margin-bottom:4px"><strong>Label: &ldquo;Tax invoice&rdquo;</strong></li>
+      <li style="margin-bottom:4px">Supplier&rsquo;s name and <strong>ABN</strong> (Australian Business Number)</li>
+      <li style="margin-bottom:4px">Date of issue</li>
+      <li style="margin-bottom:4px">Description of each good or service supplied</li>
+      <li style="margin-bottom:4px">Total price, plus either: the GST amount shown separately, or a statement that the total price includes GST</li>
+    </ul>
+
+    <p>For supplies of <strong>AUD $1,000 or more</strong>, also include the buyer&rsquo;s identity (name and ABN, or address if the buyer has no ABN). For supplies under <strong>AUD $82.50</strong>, no tax invoice is required &mdash; a receipt is sufficient.</p>
+
+    <h2 id="canada">Canada &mdash; GST/HST invoices</h2>
+    <p>Required by the CRA (Canada Revenue Agency) for all GST/HST-registered registrants. For supplies over <strong>CAD $30</strong>:</p>
+    <ul style="margin:10px 0 10px 20px;padding:0;line-height:1.9">
+      <li style="margin-bottom:4px">Supplier&rsquo;s business name</li>
+      <li style="margin-bottom:4px"><strong>GST/HST registration number</strong> (format: 123456789 RT0001)</li>
+      <li style="margin-bottom:4px">Invoice date</li>
+      <li style="margin-bottom:4px">Brief description of goods or services</li>
+      <li style="margin-bottom:4px">Total amount payable</li>
+      <li style="margin-bottom:4px">GST/HST amount, or a statement that the price includes HST</li>
+    </ul>
+    <p>For supplies over <strong>CAD $150</strong>, also include the buyer&rsquo;s name or business name and payment terms.</p>
+    <p>HST rates vary by province: Ontario 13%, Nova Scotia/New Brunswick/Newfoundland &amp; Labrador/PEI 15%. British Columbia, Alberta, Saskatchewan, and Manitoba charge 5% federal GST and add their own provincial sales tax (PST) separately. Quebec charges 5% GST and 9.975% QST separately. When working with clients in HST provinces, the invoice must show which province&rsquo;s HST rate applies.</p>
+
+    <h2 id="us">United States</h2>
+    <p>There is no federal law prescribing invoice content in the United States. The universal minimum above is sufficient for most commercial invoices. If you are required to collect state <strong>sales tax</strong>, include the tax rate, the taxable amount, and the tax amount on the invoice &mdash; some states also require your state tax registration number on the invoice. For federal government contracts, include your <strong>UEI</strong> (Unique Entity Identifier), <strong>EIN/TIN</strong>, and the purchase order number referenced in the contract.</p>
+
+    <h2 id="comparison">Jurisdiction comparison table</h2>
+    <p>For VAT/GST-registered entities. &ldquo;Required&rdquo; = mandatory by law; &ldquo;Conditional&rdquo; = required in some circumstances; &ldquo;&mdash;&rdquo; = not required.</p>
+
+    <div style="overflow-x:auto;margin:0 0 24px">
+    <table class="req-table">
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>UK (VAT)</th>
+          <th>EU (VAT)</th>
+          <th>Australia</th>
+          <th>Canada</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Invoice number (sequential)</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+          <td class="cond">Recommended</td>
+          <td class="cond">Recommended</td>
+        </tr>
+        <tr>
+          <td>Invoice date</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+        </tr>
+        <tr>
+          <td>Tax point (if differs from date)</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+          <td class="dash">&mdash;</td>
+          <td class="cond">Effective date</td>
+        </tr>
+        <tr>
+          <td>Seller name &amp; address</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+        </tr>
+        <tr>
+          <td>Seller tax registration number</td>
+          <td class="yes">VAT number</td>
+          <td class="yes">VAT ID</td>
+          <td class="yes">ABN</td>
+          <td class="yes">GST/HST reg. no.</td>
+        </tr>
+        <tr>
+          <td>Buyer name &amp; address</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+          <td class="cond">AUD $1,000+</td>
+          <td class="cond">CAD $150+</td>
+        </tr>
+        <tr>
+          <td>Buyer tax number</td>
+          <td class="dash">&mdash;</td>
+          <td class="cond">B2B supplies</td>
+          <td class="cond">ABN, AUD $1,000+</td>
+          <td class="dash">&mdash;</td>
+        </tr>
+        <tr>
+          <td>&ldquo;Tax invoice&rdquo; label</td>
+          <td class="dash">&mdash;</td>
+          <td class="dash">&mdash;</td>
+          <td class="yes">Required</td>
+          <td class="dash">&mdash;</td>
+        </tr>
+        <tr>
+          <td>Description of supply</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+        </tr>
+        <tr>
+          <td>Net amount per line</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+          <td class="dash">&mdash;</td>
+          <td class="dash">&mdash;</td>
+        </tr>
+        <tr>
+          <td>Tax rate</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+          <td class="cond">Or GST-inclusive note</td>
+          <td class="cond">Or HST-inclusive note</td>
+        </tr>
+        <tr>
+          <td>Tax amount</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+          <td class="cond">Or GST-inclusive note</td>
+          <td class="cond">Or HST-inclusive note</td>
+        </tr>
+        <tr>
+          <td>Reverse charge note</td>
+          <td class="dash">&mdash;</td>
+          <td class="cond">Cross-border B2B</td>
+          <td class="dash">&mdash;</td>
+          <td class="dash">&mdash;</td>
+        </tr>
+        <tr>
+          <td>Total net, total tax, total gross</td>
+          <td class="yes">Required</td>
+          <td class="yes">Required</td>
+          <td class="cond">Total required</td>
+          <td class="cond">Total required</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2 id="invoicequick">How InvoiceQuick maps to these requirements</h2>
+    <p>InvoiceQuick&rsquo;s fields cover all the mandatory information for UK, EU, Australian, and Canadian invoices:</p>
+
+    <ul class="fields-list">
+      <li><strong>Invoice number</strong> &rarr; Invoice number field. Use sequential numbering (INV-001, INV-002).</li>
+      <li><strong>Invoice date and due date</strong> &rarr; Issue date and due date fields.</li>
+      <li><strong>Your name, address, VAT/ABN/GST number</strong> &rarr; &ldquo;Your business&rdquo; name and &ldquo;Address &amp; contact&rdquo; fields. Include your registration number in the address block: <em>VAT Reg: GB 123 456 789</em> or <em>ABN: 51 824 753 556</em>.</li>
+      <li><strong>Client name and address</strong> &rarr; &ldquo;Bill to&rdquo; fields.</li>
+      <li><strong>Description and quantity per line</strong> &rarr; Line item description and quantity fields.</li>
+      <li><strong>Net amount, tax rate, tax amount, total</strong> &rarr; Calculated automatically from your line items and the tax rate field. Use the tax label field to write the correct label: <em>VAT @ 20%</em>, <em>GST @ 10%</em>, <em>HST @ 13%</em>.</li>
+      <li><strong>Tax point, reverse charge note, or &ldquo;Tax invoice&rdquo; label</strong> &rarr; Notes field. This is where you add any legally required notices that InvoiceQuick doesn&rsquo;t have a dedicated field for.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>InvoiceQuick formats your invoice &mdash; it doesn&rsquo;t determine your tax obligations.</strong> Whether tax applies, which rate is correct, and what registration numbers you need depend on your registration status and your client&rsquo;s location. Use the Notes field for any notices your accountant has confirmed are required, such as &ldquo;Tax invoice&rdquo; for Australian GST, your ABN, or &ldquo;Reverse charge &mdash; buyer to account for VAT&rdquo; for EU cross-border supplies.
+    </div>
+
+    <p style="margin:28px 0 8px"><a class="btn primary" href="../">Create my invoice with InvoiceQuick &rarr;</a></p>
+    <p style="font-size:14px;color:var(--muted);margin:0 0 32px">Add your tax number and any required notices to the Address and Notes fields &mdash; InvoiceQuick prints them on every PDF, no signup required.</p>
+
+    <h2 style="margin-top:40px">Also on InvoiceQuick</h2>
+    <div class="suite">
+      <a href="create-free-invoice-pdf.html">
+        <span class="s-tag">Create PDF</span>
+        <span class="s-name">Create a free invoice PDF</span>
+        <p>What to include on a professional invoice, how to number correctly, and how to export a clean PDF from your browser.</p>
+      </a>
+      <a href="invoice-payment-terms.html">
+        <span class="s-tag">Payment terms</span>
+        <span class="s-name">Invoice payment terms</span>
+        <p>What Net 30, Net 14, and Due on Receipt mean, when to use each, and exactly what to write in the Notes field.</p>
+      </a>
+      <a href="invoice-clients-international.html">
+        <span class="s-tag">International</span>
+        <span class="s-name">Invoicing international clients</span>
+        <p>Currency, VAT for cross-border EU supplies, reverse charge, and what to do when a client pays in a different currency.</p>
+      </a>
+      <a href="freelance-contract-template.html">
+        <span class="s-tag">Contracts</span>
+        <span class="s-name">Freelance contract guide</span>
+        <p>Late payment clauses, IP ownership, kill fees, and deposit structures that protect you before work starts.</p>
+      </a>
+    </div>
+
+    <h2 style="margin-top:40px">More free tools for freelancers &amp; small businesses</h2>
+    <div class="suite">
+      <a href="https://labs.copperbaytech.com/complykit/" target="_blank" rel="noopener noreferrer">
+        <span class="s-tag">Privacy &amp; compliance</span>
+        <span class="s-name">ComplyKit</span>
+        <p>Generate a privacy policy, terms of service, and cookie-consent banner for your website &mdash; free, in your browser.</p>
+      </a>
+      <a href="https://labs.copperbaytech.com/shipsafe/" target="_blank" rel="noopener noreferrer">
+        <span class="s-tag">ADA &amp; privacy risk</span>
+        <span class="s-name">ShipSafe</span>
+        <p>Scan a URL for accessibility and privacy gaps before handing a web project to a client.</p>
+      </a>
+      <a href="https://labs.copperbaytech.com/hardencheck/" target="_blank" rel="noopener noreferrer">
+        <span class="s-tag">Security headers</span>
+        <span class="s-name">HardenCheck</span>
+        <p>Check a live site&rsquo;s HTTP security headers before client delivery.</p>
+      </a>
+    </div>
+
+    <h2 id="faq" style="margin-top:48px">Frequently asked questions</h2>
+    <div class="faq-section">
+      <details open>
+        <summary>Is an invoice a legally binding document?</summary>
+        <p>An invoice is a demand for payment, not a contract in itself. Its enforceability depends on the underlying agreement &mdash; a contract, purchase order, or accepted quote that establishes what was agreed and at what price. Without an underlying agreement, an invoice alone may not be enough to recover a disputed debt in court, though it is strong evidence of a commercial relationship and the amount claimed. A signed <a href="freelance-contract-template.html">freelance contract</a> before work starts is the more reliable foundation.</p>
+      </details>
+      <details>
+        <summary>Does an invoice need to say &ldquo;Tax invoice&rdquo; or just &ldquo;Invoice&rdquo;?</summary>
+        <p>In <strong>Australia</strong>, the ATO requires the exact phrase &ldquo;Tax invoice&rdquo; on every GST tax invoice &mdash; &ldquo;Invoice&rdquo; alone is not sufficient for GST credit purposes. In the <strong>UK</strong> and <strong>EU</strong>, &ldquo;Invoice&rdquo; is the standard label; there is no legal requirement to say &ldquo;Tax invoice,&rdquo; though it is common practice. In <strong>Canada</strong> and the <strong>US</strong>, no specific label wording is prescribed. For Australian invoices, add &ldquo;Tax invoice&rdquo; to the top of your InvoiceQuick PDF using the Notes field, or include it in your business name line.</p>
+      </details>
+      <details>
+        <summary>Can I issue an invoice if I&rsquo;m not VAT or GST registered?</summary>
+        <p>Yes. A non-registered invoice &mdash; sometimes called a plain invoice or commercial invoice &mdash; is a valid legal payment demand. It must not include a VAT or GST charge, and in the UK you must not display a VAT registration number you do not have. The required fields are fewer: your name and address, an invoice number, the date, the client&rsquo;s name, a description of the work, and the total amount due. InvoiceQuick works for non-registered invoices &mdash; simply leave the tax rate at 0% and do not add a VAT or GST number to your address block.</p>
+      </details>
+      <details>
+        <summary>Must I include my VAT or GST registration number on every invoice?</summary>
+        <p>Yes, if you are registered. In the <strong>UK</strong>, your VAT registration number must appear on every VAT invoice. In <strong>EU</strong> member states, your VAT ID is required on every VAT invoice you issue. In <strong>Australia</strong>, your ABN must appear on every GST tax invoice. In <strong>Canada</strong>, your GST/HST registration number is required on every invoice where you charge GST/HST. If you are not registered, do not include a registration number &mdash; issuing a document that shows a VAT or GST charge without being registered is a criminal offence in most jurisdictions.</p>
+      </details>
+      <details>
+        <summary>What is a tax point on a UK VAT invoice?</summary>
+        <p>The tax point is the date on which a VAT liability arises and determines which VAT period the tax falls into. For most services, the basic tax point is the date the service is completed; for goods, it is the date of delivery. The <em>actual</em> tax point is typically the earlier of: the invoice date and the date payment is received. If your invoice date differs from the date the supply was made or payment was received, HMRC requires you to show the tax point separately so the correct VAT quarter is clear. For simple, same-period invoices where the invoice date equals the supply date, the invoice date also serves as the tax point and no separate entry is needed.</p>
+      </details>
+      <details>
+        <summary>Do I legally need to include an invoice number?</summary>
+        <p>Yes if you are VAT/GST-registered: UK HMRC, EU VAT rules, and Australian ATO rules all require a unique sequential invoice number on every tax invoice. Even for non-registered businesses, sequential invoice numbers are strongly recommended &mdash; they are what auditors and accounts payable departments expect, they create a gap-free paper trail, and they give both parties a reference number for correspondence. Never reuse an invoice number; cancelled invoices should be voided with a note, not recycled.</p>
+      </details>
+      <details>
+        <summary>What is a reverse charge invoice?</summary>
+        <p>A reverse charge invoice is used in EU B2B transactions where the buyer, not the seller, accounts for VAT. This applies when a VAT-registered seller in one EU country supplies services to a VAT-registered business in a different EU country. The seller issues an invoice showing the net amount with no VAT charged, and adds the note: &ldquo;Reverse charge &mdash; buyer to account for VAT under Article 194/196 of Directive 2006/112/EC.&rdquo; The buyer declares the VAT in their own country&rsquo;s VAT return at the local rate. The seller must have the buyer&rsquo;s VAT number to validly apply the reverse charge. In InvoiceQuick, set the tax rate to 0% and add the reverse charge note to the Notes field.</p>
+      </details>
+    </div>
+  </div>
+</article>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="wrap foot">
+    <div>
+      <a class="brand small" href="../" aria-label="InvoiceQuick &mdash; homepage">
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="11" y="6" width="33" height="46" rx="4" fill="#13525a"/>
+          <line x1="18" y1="17" x2="37" y2="17" stroke="#faf8f4" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="18" y1="24" x2="37" y2="24" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="18" y1="31" x2="31" y2="31" stroke="#cbd2da" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="43" cy="44" r="13" fill="#bf6b3c"/>
+          <text x="43" y="49.4" font-family="Fraunces,Georgia,serif" font-size="17" font-weight="700" fill="#faf8f4" text-anchor="middle">$</text>
+        </svg>
+        <span class="wordmark">InvoiceQuick</span>
+      </a>
+      <p class="fine">Formats your invoice &mdash; not tax or legal advice.</p>
+    </div>
+    <nav class="foot-nav" aria-label="Footer navigation">
+      <a href="../about.html">How it works</a>
+      <a href="create-free-invoice-pdf.html">How to create an invoice PDF</a>
+      <a href="send-invoice-email.html">How to send an invoice</a>
+      <a href="invoice-clients-international.html">International invoicing</a>
+      <a href="freelance-contract-template.html">Freelance contract guide</a>
+      <a href="statement-of-work-template.html">Statement of work guide</a>
+      <a href="invoice-payment-terms.html">Invoice payment terms</a>
+      <a href="invoice-legal-requirements.html" aria-current="page">Invoice legal requirements</a>
+      <a href="follow-up-unpaid-invoice.html">Unpaid invoice follow-up</a>
+      <a href="handle-disputed-invoice.html">Disputed invoice</a>
+      <a href="https://labs.copperbaytech.com/complykit/" target="_blank" rel="noopener noreferrer">ComplyKit</a>
+      <a href="https://labs.copperbaytech.com/shipsafe/" target="_blank" rel="noopener noreferrer">ShipSafe</a>
+      <a href="https://copperbaytech.com" target="_blank" rel="noopener noreferrer">Get it built for you &rarr;</a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <p class="madeby">A <a href="https://copperbaytech.com" target="_blank" rel="noopener noreferrer">Copper Bay Labs</a> product. Formats invoices only &mdash; not tax, legal, or accounting advice.</p>
+  </div>
+</footer>
+
+</body>
+</html>
